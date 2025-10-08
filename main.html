@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анна & Александр | Свадебное приглашение</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Great+Vibes&family=Dancing+Script:wght@400;700&family=Alex+Brush&family=Allura&family=Pacifico&family=Marck+Script&family=Bad+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --main-color: #d4a373;
+            --dark-color: #2c2c2c;
+            --light-color: #f9f4f0;
+            --accent-color: #b88f5b;
+            --paper-bg: #f5f0eb;
+            --story-bg: #f0e8d8;
+            --story-accent: #c4a484;
+            --calendar-bg: #f8f8f8;
+            --calendar-text: #555;
+            --heart-color: #e74c3c;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/stol.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 90%;
+        }
+
+        .header-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            padding: 10px 0;
+        }
+
+        .header-names {
+            font-family: 'Alex Brush', cursive;
+            font-size: 3.5em;
+            margin: 0;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-date {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2em;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            margin: 20px 0;
+        }
+
+        .invitation {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: var(--light-color);
+        }
+
+        .details {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        .timing {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 40px auto;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .timing-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            width: 100%;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .timing-time {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.2em;
+            min-width: 80px;
+            text-align: left;
+        }
+
+        .timing-icon {
+            margin: 0 20px;
+            font-size: 1.5em;
+            color: var(--accent-color);
+        }
+
+        .timing-title-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.8em;
+            margin: 0;
+            color: var(--dark-color);
+        }
+
+        .timing-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--main-color);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 20px 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .dresscode {
+            font-style: italic;
+            margin: 20px 0;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Раздел обратного отсчёта */
+        .countdown-section {
+            background-color: var(--paper-bg);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,20 Q25,0 50,10 T100,5 L100,20 Z" fill="%23f9f4f0"/></svg>');
+            background-repeat: repeat-x;
+        }
+
+        .countdown-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,0 Q25,20 50,10 T100,15 L100,0 Z" fill="%23f9f4f0"/></svg>');
+            background-repeat: repeat-x;
+        }
+
+        .countdown-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+        }
+
+        .highlight {
+            background-color: var(--main-color);
+            height: 10px;
+            margin: 10px auto;
+            width: 80%;
+            border-radius: 5px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .countdown-item {
+            text-align: center;
+            position: relative;
+            background-color: var(--paper-bg);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+        }
+
+        .countdown-item::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,20 Q25,0 50,10 T100,5 L100,20 Z" fill="%23e8e0d5"/></svg>');
+            background-repeat: repeat-x;
+        }
+
+        .countdown-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 5px;
+        }
+
+        .countdown-label {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3em;
+            color: var(--dark-color);
+            font-weight: 400;
+        }
+
+        /* Раздел "Мы официально станем семьёй" */
+        .family-section {
+            background-color: var(--paper-bg);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-image: url(images/cvety.jpg);
+            background-size: cover;
+            background-position: center;
+            color: var(--dark-color);
+        }
+
+        .family-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(245, 240, 235, 0.6);
+        }
+
+        .family-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .family-title {
+            font-family: 'Alex Brush', cursive;
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #7e3131;
+        }
+
+        .family-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: #9d5d5d;
+        }
+
+        .family-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            color: #9d5d5d;
+        }
+
+        .family-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .family-script {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            color: rgba(0, 0, 0, 0.7);
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        /* Раздел "Наша история любви" */
+        .story-section {
+            background-color: var(--story-bg);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        .story-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            width: 100%;
+            background-color: var(--story-accent);
+        }
+
+        .story-love {
+            font-family: 'Allura', cursive;
+            font-size: 2.2em;
+            color: var(--story-accent);
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: var(--dark-color);
+        }
+
+        .story-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 30px auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Раздел "Мы ждём вас" с календарём */
+        .waiting-section {
+            background-color: var(--light-color);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .waiting-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .waiting-you {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5em;
+            color: var(--accent-color);
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        .calendar {
+            max-width: 350px;
+            margin: 0 auto;
+            background-color: var(--calendar-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .calendar-month {
+            font-family: 'Alex Brush', cursive;
+            font-size: 2.5em;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--calendar-text);
+        }
+
+        .calendar-day {
+            padding: 10px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        .calendar-date {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+        }
+
+        .calendar-heart {
+            position: relative;
+        }
+
+        .calendar-heart::after {
+            content: '❤';
+            position: absolute;
+            top: -15px;
+            right: -10px;
+            color: var(--heart-color);
+            font-size: 1.2em;
+        }
+
+        .highlighted-date {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: var(--dark-color);
+        }
+
+        .date-display {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-top: 30px;
+            letter-spacing: 2px;
+        }
+
+        /* Раздел "До скорой встречи!" */
+        .farewell-section {
+            background-color: var(--light-color);
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .farewell-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .farewell-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .farewell-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2em;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+
+        .farewell-love {
+            font-family: 'Marck Script', cursive;
+            font-size: 4em;
+            color: var(--accent-color);
+            margin: 20px 0;
+            position: relative;
+            display: block;
+        }
+
+        .farewell-love::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,20 Q25,0 50,10 T100,5 L100,20 Z" fill="%23f9f4f0"/></svg>');
+            background-repeat: repeat-x;
+            opacity: 0.7;
+        }
+
+        .farewell-names {
+            font-family: 'Alex Brush', cursive;
+            font-size: 2.5em;
+            color: var(--dark-color);
+            margin-top: 20px;
+        }
+
+        /* Раздел "Локация" */
+        .location-section {
+            background-color: var(--light-color);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-title {
+            font-family: 'Bad Script', cursive;
+            font-size: 3.5em;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+
+        .location-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+        }
+
+        .location-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .location-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .location-info {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .location-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .location-address {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            line-height: 1.6;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+
+        .location-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .location-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .location-map {
+            display: inline-block;
+            background-color: var(--dark-color);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .location-map:hover {
+            background-color: var(--accent-color);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-names {
+                font-size: 2.5em;
+            }
+
+            .header-title {
+                font-size: 1.2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            .timing-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .timing-time {
+                min-width: auto;
+                margin-bottom: 10px;
+            }
+
+            .countdown-item {
+                min-width: 100px;
+            }
+
+            .countdown-number {
+                font-size: 2.5em;
+            }
+
+            .countdown-label {
+                font-size: 1em;
+            }
+
+            .family-title {
+                font-size: 2em;
+            }
+
+            .family-subtitle {
+                font-size: 1.5em;
+            }
+
+            .family-script {
+                font-size: 1.5em;
+            }
+
+            .story-title {
+                font-size: 2em;
+            }
+
+            .story-love {
+                font-size: 1.8em;
+            }
+
+            .story-content {
+                font-size: 1em;
+            }
+
+            .waiting-title {
+                font-size: 2em;
+            }
+
+            .waiting-you {
+                font-size: 2em;
+            }
+
+            .calendar-month {
+                font-size: 2em;
+            }
+
+            .date-display {
+                font-size: 2em;
+            }
+
+            .farewell-title {
+                font-size: 1.8em;
+            }
+
+            .farewell-love {
+                font-size: 2.5em;
+            }
+
+            .farewell-names {
+                font-size: 2em;
+            }
+
+            .location-title {
+                font-size: 2.5em;
+            }
+
+            .location-subtitle {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="header-title">THE WEDDING DAY</div>
+                <div class="header-names">Анна & Александр</div>
+                <div class="header-date">01.11.2025 | 16:00</div>
+            </div>
+        </header>
+        <section class="invitation">
+            <!-- Раздел "Мы ждали этот день" -->
+            <div class="family-section">
+                <div class="family-content">
+                    <!-- <div class="family-title">МЫ</div>
+                    <div class="family-subtitle">ЖДАЛИ ЭТОТ ДЕНЬ<br>С ВАМИ</div> -->
+                    <div class="family-title">ДОРОГИЕ НАШИ</div>
+                    <!-- <div class="family-subtitle">ЖДАЛИ ЭТОТ ДЕНЬ<br>С ВАМИ</div> -->
+                    <div class="family-text">
+                        Если вы сейчас читаете этот текст, значит совсем скоро вы увидите одного из нас в свадебном
+                        платье и думаем, что вы догадываетесь, кого именно... Мы с радостью хотим отпраздновать вместе с
+                        вами нашу свадьбу!
+                    </div>
+                    <div class="family-text">
+                        12.12.2024 мы сказали друг другу “да” на солнечном Кипре, а теперь настало время разделить этот
+                        особенный момент с самыми близкими!
+                    </div>
+                    <img src="images/zal.jpg" alt="Свадебный зал" class="family-image" width="400">
+                    <div class="family-script">To the moon and back</div>
+                </div>
+            </div>
+            <!-- Раздел "Дорогие наши" -->
+            <!-- <div class="details">
+                <h2>Дорогие наши!</h2>
+                <p>Мы с радостью хотим отпраздновать вместе с вами нашу свадьбу! 12.12.2024 мы
+                    сказали друг другу “да” на солнечном Кипре, а теперь настало время разделить этот особенный момент с
+                    самыми близкими!</p>
+            </div> -->
+            <!-- Раздел "Наша история любви" -->
+            <div class="story-section">
+                <div class="story-title">НАША ИСТОРИЯ</div>
+                <span class="story-love">любви</span>
+                <img src="images/afrodita.jpg" alt="Наша история любви" class="story-image" width="500">
+                <div class="story-content">
+                    <p>Всё началось в 2020 году.</p>
+                    <p>Мы искали друг друга на просторах интернета и нашли именно тогда, когда были к этому
+                        готовы. Несколько месяцев переписки, нескончаемые разговоры обо всём и ни о чём... И вот однажды
+                        мы решили встретиться.
+                    </p>
+                    <p>Та встреча изменила всё. Мы разговаривали, словно были знакомы вечность. Между нами сразу
+                        возникло чувство лёгкости и понимания, которое бывает только со своим человеком.</p>
+                    <p>С тех пор мы стали неразлучны.</p>
+                    <p>Прогулки, фильмы, концерты, бесконечные разговоры - всё это стало частью нашей общей истории.
+                        Даже расстояние в четыре тысячи километров не смогло нас разделить: мы всегда находили способ
+                        быть рядом, делиться мыслями, мечтами и поддерживать друг друга.</p>
+                    <p>Так шаг за шагом мы поняли, что хотим идти дальше вместе.</p>
+                    <p>А теперь приглашаем вас разделить с нами радость этого пути и отпраздновать нашу историю любви.
+                    </p>
+                </div>
+            </div>
+            <!-- Раздел "Мы ждём вас" -->
+            <!-- <div class="waiting-section">
+                <div class="waiting-title">МЫ ЖДЁМ</div>
+                <div class="waiting-you">Вас</div>
+                <div class="calendar">
+                    <div class="calendar-month">Ноябрь</div>
+                    <div class="calendar-grid">
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day calendar-heart">
+                            <div class="calendar-date">
+                                <span class="highlighted-date">1</span>
+                            </div>
+                        </div>
+                        <div class="calendar-day">2</div>
+                        <div class="calendar-day">3</div>
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day">5</div>
+                        <div class="calendar-day">6</div>
+                        <div class="calendar-day">7</div>
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day">9</div>
+                        <div class="calendar-day">10</div>
+                        <div class="calendar-day">11</div>
+                        <div class="calendar-day">12</div>
+                        <div class="calendar-day">13</div>
+                        <div class="calendar-day">14</div>
+                        <div class="calendar-day">15</div>
+                        <div class="calendar-day">16</div>
+                        <div class="calendar-day">17</div>
+                        <div class="calendar-day">18</div>
+                        <div class="calendar-day">19</div>
+                        <div class="calendar-day">20</div>
+                        <div class="calendar-day">21</div>
+                        <div class="calendar-day">22</div>
+                        <div class="calendar-day">23</div>
+                        <div class="calendar-day">24</div>
+                        <div class="calendar-day">25</div>
+                        <div class="calendar-day">26</div>
+                        <div class="calendar-day">27</div>
+                        <div class="calendar-day">28</div>
+                        <div class="calendar-day">29</div>
+                        <div class="calendar-day">30</div>
+                    </div>
+                </div>
+                <div class="date-display">01 11 25</div>
+            </div> -->
+            <!-- Раздел "Локация" -->
+            <div class="location-section">
+                <div class="location-title">Локация</div>
+                <div class="location-subtitle">НАША СВАДЬБА<br>ПРОЙДЁТ В</div>
+                <div class="location-card">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Локация HIDE" class="location-image">
+                    <div class="location-info">
+                        <div class="location-name">«HIDE»</div>
+                        <div class="location-address">
+                            Адрес: Московская область,<br>
+                            городской округ Мытищи,<br>
+                            Хлебниковский лесопарк
+                        </div>
+                        <div class="location-gallery">
+                            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                alt="Интерьер">
+                            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                alt="Территория">
+                        </div>
+                        <a href="#" class="location-map">Как добраться</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Раздел "Детали вечера" -->
+            <div class="details">
+                <h2>Детали вечера</h2>
+                <p>📅 <strong>1 ноября 2025 года</strong></p>
+                <p>📍 <strong>Ресторан "18.12"</strong><br>Москва, ул. 1812 года, д. 2, корп. 2</p>
+                <div class="dresscode">
+                    <p>👗 <strong>Дресс-код:</strong> праздничное настроение</p>
+                </div>
+                <div class="timing">
+                    <div class="timing-title">Тайминг</div>
+                    <div class="timing-item">
+                        <div class="timing-time">16:00</div>
+                        <div class="timing-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="timing-title-text">We Meet</div>
+                            <div class="timing-desc">Сбор гостей</div>
+                        </div>
+                    </div>
+                    <div class="timing-item">
+                        <div class="timing-time">16:30</div>
+                        <div class="timing-icon"><i class="fas fa-ring"></i></div>
+                        <div>
+                            <div class="timing-title-text">We Do</div>
+                            <div class="timing-desc">Фуршет и фотосессия</div>
+                        </div>
+                    </div>
+                    <div class="timing-item">
+                        <div class="timing-time">18:00</div>
+                        <div class="timing-icon"><i class="fas fa-utensils"></i></div>
+                        <div>
+                            <div class="timing-title-text">We Party</div>
+                            <div class="timing-desc">Праздничный ужин</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#map" class="btn">Как добраться</a>
+            </div>
+            <!-- Раздел "До нашей свадьбы осталось" -->
+            <div class="countdown-section">
+                <div class="countdown-title">ДО НАШЕЙ СВАДЬБЫ ОСТАЛОСЬ</div>
+                <div class="highlight"></div>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">Дней</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">Часов</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">Минут</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Секунд</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Раздел "До скорой встречи!" -->
+            <div class="farewell-section">
+                <div class="farewell-content">
+                    <div class="farewell-title">ДО СКОРОЙ ВСТРЕЧИ!</div>
+                    <div class="farewell-love">С любовью,</div>
+                    <div class="farewell-names">Анна и Александр</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        // Обратный отсчёт
+        function updateCountdown() {
+            const now = new Date();
+            const eventDate = new Date('2025-11-01T16:00:00');
+            const diff = eventDate - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            document.getElementById('days').textContent = days < 10 ? '0' + days : days;
+            document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
+            document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+
+</html>
