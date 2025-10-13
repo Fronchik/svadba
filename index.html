@@ -18,8 +18,7 @@
             --paper-bg: #f5f0eb;
             --story-bg: #f0e8d8;
             --story-accent: #c4a484;
-            --calendar-bg: #f8f8f8;
-            --calendar-text: #555;
+
             --heart-color: #e74c3c;
         }
 
@@ -309,21 +308,6 @@
             z-index: 2;
         }
 
-        .family-title {
-            font-family: 'Alex Brush', cursive;
-            font-size: 3em;
-            margin-bottom: 10px;
-            color: #7e3131;
-        }
-
-        .family-subtitle {
-            font-family: 'Playfair Display', serif;
-            font-size: 2em;
-            font-weight: 400;
-            margin-bottom: 30px;
-            color: #9d5d5d;
-        }
-
         .family-text {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.1em;
@@ -347,7 +331,6 @@
             position: absolute;
             right: 20px;
             bottom: 20px;
-            /* color: rgba(0, 0, 0, 0.7); */
             color: #7e3131;
             writing-mode: vertical-rl;
             text-orientation: mixed;
@@ -410,95 +393,6 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
-        /* Раздел "Мы ждём вас" с календарём */
-        .waiting-section {
-            background-color: var(--light-color);
-            padding: 80px 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        .waiting-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: var(--dark-color);
-        }
-
-        .waiting-you {
-            font-family: 'Pacifico', cursive;
-            font-size: 2.5em;
-            color: var(--accent-color);
-            display: inline-block;
-            margin-bottom: 40px;
-        }
-
-        .calendar {
-            max-width: 350px;
-            margin: 0 auto;
-            background-color: var(--calendar-bg);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .calendar-month {
-            font-family: 'Alex Brush', cursive;
-            font-size: 2.5em;
-            color: var(--dark-color);
-            margin-bottom: 20px;
-        }
-
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 10px;
-            font-family: 'Montserrat', sans-serif;
-            color: var(--calendar-text);
-        }
-
-        .calendar-day {
-            padding: 10px;
-            text-align: center;
-            font-size: 1.1em;
-        }
-
-        .calendar-date {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px;
-        }
-
-        .calendar-heart {
-            position: relative;
-        }
-
-        .calendar-heart::after {
-            content: '❤';
-            position: absolute;
-            top: -15px;
-            right: -10px;
-            color: var(--heart-color);
-            font-size: 1.2em;
-        }
-
-        .highlighted-date {
-            font-weight: bold;
-            font-size: 1.3em;
-            color: var(--dark-color);
-        }
-
-        .date-display {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            font-weight: 700;
-            color: var(--dark-color);
-            margin-top: 30px;
-            letter-spacing: 2px;
-        }
-
         /* Раздел "До скорой встречи!" */
         .farewell-section {
             background-color: var(--light-color);
@@ -506,7 +400,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-image: url(images/footer1.jpg);
             background-size: cover;
             background-position: center;
         }
@@ -566,7 +460,7 @@
         /* Раздел "Локация" */
         .location-section {
             background-color: var(--light-color);
-            padding: 80px 20px;
+            padding: 30px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -622,20 +516,6 @@
             line-height: 1.6;
             color: var(--dark-color);
             margin-bottom: 20px;
-        }
-
-        .location-gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin: 20px 0;
-        }
-
-        .location-gallery img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
         }
 
         .location-map {
@@ -713,14 +593,6 @@
                 font-size: 1em;
             }
 
-            .family-title {
-                font-size: 2em;
-            }
-
-            .family-subtitle {
-                font-size: 1.5em;
-            }
-
             .family-script {
                 font-size: 1.5em;
             }
@@ -735,22 +607,6 @@
 
             .story-content {
                 font-size: 1em;
-            }
-
-            .waiting-title {
-                font-size: 2em;
-            }
-
-            .waiting-you {
-                font-size: 2em;
-            }
-
-            .calendar-month {
-                font-size: 2em;
-            }
-
-            .date-display {
-                font-size: 2em;
             }
 
             .farewell-title {
@@ -786,13 +642,10 @@
             </div>
         </header>
         <section class="invitation">
-            <!-- Раздел "Мы ждали этот день" -->
+            <!-- Раздел "Дорогие наши" -->
             <div class="family-section">
                 <div class="family-content">
-                    <!-- <div class="family-title">МЫ</div>
-                    <div class="family-subtitle">ЖДАЛИ ЭТОТ ДЕНЬ<br>С ВАМИ</div> -->
                     <div class="family-title">ДОРОГИЕ НАШИ</div>
-                    <!-- <div class="family-subtitle">ЖДАЛИ ЭТОТ ДЕНЬ<br>С ВАМИ</div> -->
                     <div class="family-text">
                         Если вы сейчас читаете этот текст, значит совсем скоро вы увидите одного из нас в свадебном
                         платье и думаем, что вы догадываетесь, кого именно... Мы с радостью хотим отпраздновать вместе с
@@ -806,13 +659,6 @@
                     <div class="family-script">To the moon and back</div>
                 </div>
             </div>
-            <!-- Раздел "Дорогие наши" -->
-            <!-- <div class="details">
-                <h2>Дорогие наши!</h2>
-                <p>Мы с радостью хотим отпраздновать вместе с вами нашу свадьбу! 12.12.2024 мы
-                    сказали друг другу “да” на солнечном Кипре, а теперь настало время разделить этот особенный момент с
-                    самыми близкими!</p>
-            </div> -->
             <!-- Раздел "Наша история любви" -->
             <div class="story-section">
                 <div class="story-title">НАША ИСТОРИЯ</div>
@@ -835,114 +681,78 @@
                     </p>
                 </div>
             </div>
-            <!-- Раздел "Мы ждём вас" -->
-            <!-- <div class="waiting-section">
-                <div class="waiting-title">МЫ ЖДЁМ</div>
-                <div class="waiting-you">Вас</div>
-                <div class="calendar">
-                    <div class="calendar-month">Ноябрь</div>
-                    <div class="calendar-grid">
-                        <div class="calendar-day"></div>
-                        <div class="calendar-day"></div>
-                        <div class="calendar-day"></div>
-                        <div class="calendar-day"></div>
-                        <div class="calendar-day"></div>
-                        <div class="calendar-day calendar-heart">
-                            <div class="calendar-date">
-                                <span class="highlighted-date">1</span>
-                            </div>
-                        </div>
-                        <div class="calendar-day">2</div>
-                        <div class="calendar-day">3</div>
-                        <div class="calendar-day">4</div>
-                        <div class="calendar-day">5</div>
-                        <div class="calendar-day">6</div>
-                        <div class="calendar-day">7</div>
-                        <div class="calendar-day">8</div>
-                        <div class="calendar-day">9</div>
-                        <div class="calendar-day">10</div>
-                        <div class="calendar-day">11</div>
-                        <div class="calendar-day">12</div>
-                        <div class="calendar-day">13</div>
-                        <div class="calendar-day">14</div>
-                        <div class="calendar-day">15</div>
-                        <div class="calendar-day">16</div>
-                        <div class="calendar-day">17</div>
-                        <div class="calendar-day">18</div>
-                        <div class="calendar-day">19</div>
-                        <div class="calendar-day">20</div>
-                        <div class="calendar-day">21</div>
-                        <div class="calendar-day">22</div>
-                        <div class="calendar-day">23</div>
-                        <div class="calendar-day">24</div>
-                        <div class="calendar-day">25</div>
-                        <div class="calendar-day">26</div>
-                        <div class="calendar-day">27</div>
-                        <div class="calendar-day">28</div>
-                        <div class="calendar-day">29</div>
-                        <div class="calendar-day">30</div>
-                    </div>
-                </div>
-                <div class="date-display">01 11 25</div>
-            </div> -->
             <!-- Раздел "Локация" -->
             <div class="location-section">
-                <div class="location-title">Локация</div>
-                <div class="location-subtitle">НАША СВАДЬБА<br>ПРОЙДЁТ В</div>
                 <div class="location-card">
-                    <img src="images/restoran.jpg" alt="Ресторан" class="location-image">
                     <div class="location-info">
-                        <div class="location-name">«Ресторан 18.12»</div>
-                        <div class="location-address">
-                            Адрес: Москва, ул. 1812 года, д. 2, корп. 2<br>
-                        </div>
-                        <div class="location-gallery">
-                            <img src="images/nashzal.jpg" alt="Интерьер">
-                            <img src="images/restik.jpg" alt="Территория">
+                        <!-- <a href="https://yandex.com/maps/org/restaurant_18_12/1243410841/?ll=37.524507%2C55.735632&z=16"
+                            class="location-map" target="_blank" rel="noopener noreferrer">Как добраться</a> -->
+                        <div class="location-section">
+                            <div class="location-title"
+                                style="font-family: 'Great Vibes', cursive; font-size: 3em; color: #d4a373;">Локация
+                            </div>
+                            <div class="location-subtitle"
+                                style="font-family: 'Playfair Display', serif; font-size: 1.8em; color: #7e3131; font-weight: 400;">
+                                Место проведения</div>
+                            <div class="location-card">
+                                <img src="images/restoran.jpg" alt="Ресторан" class="location-image">
+                                <div class="location-info">
+                                    <div class="location-name"
+                                        style="font-family: 'Playfair Display', serif; font-size: 2em; color: #7e3131; font-weight: 600;">
+                                        «Ресторан 18.12»</div>
+                                    <div class="location-address"
+                                        style="font-family: 'Montserrat', sans-serif; font-size: 1em; color: #555; line-height: 1.6;">
+                                        Адрес: Москва, ул. 1812 года, д. 2, корп. 2
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <a href="https://yandex.com/maps/org/restaurant_18_12/1243410841/?ll=37.524507%2C55.735632&z=16"
-                            class="location-map" target="_blank" rel="noopener noreferrer">Как добраться</a>
+                            class="btn" target="_blank" rel="noopener noreferrer">Как добраться</a>
                     </div>
                 </div>
             </div>
             <!-- Раздел "Детали вечера" -->
             <div class="details">
-                <h2>Детали вечера</h2>
-                <p>📅 <strong>1 ноября 2025 года</strong></p>
-                <p>📍 <strong>Ресторан "18.12"</strong><br>Москва, ул. 1812 года, д. 2, корп. 2</p>
-                <div class="dresscode">
-                    <p>👗 <strong>Дресс-код:</strong> праздничное настроение</p>
-                </div>
+                <h2>Программа вечера</h2>
                 <div class="timing">
-                    <div class="timing-title">Тайминг</div>
                     <div class="timing-item">
                         <div class="timing-time">16:00</div>
                         <div class="timing-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
-                            <div class="timing-title-text">We Meet</div>
-                            <div class="timing-desc">Сбор гостей</div>
+                            <div class="timing-title-text">Мы собираемся</div>
+                            <div class="timing-desc">Сбор гостей и приветственный бокал</div>
                         </div>
                     </div>
                     <div class="timing-item">
                         <div class="timing-time">16:30</div>
-                        <div class="timing-icon"><i class="fas fa-ring"></i></div>
+                        <div class="timing-icon"><i class="fas fa-camera"></i></div>
                         <div>
-                            <div class="timing-title-text">We Do</div>
-                            <div class="timing-desc">Фуршет и фотосессия</div>
+                            <div class="timing-title-text">Мы сияем</div>
+                            <div class="timing-desc">Фотосессия, фуршет и смех</div>
                         </div>
                     </div>
                     <div class="timing-item">
                         <div class="timing-time">18:00</div>
                         <div class="timing-icon"><i class="fas fa-utensils"></i></div>
                         <div>
-                            <div class="timing-title-text">We Party</div>
-                            <div class="timing-desc">Праздничный ужин</div>
+                            <div class="timing-title-text">Мы празднуем</div>
+                            <div class="timing-desc">Праздничный ужин и тёплые слова</div>
+                        </div>
+                    </div>
+                    <div class="timing-item">
+                        <div class="timing-time">23:00</div>
+                        <div class="timing-icon"><i class="fas fa-cake-candles"></i></div>
+                        <div>
+                            <div class="timing-title-text">Мы завершаем вечер</div>
+                            <div class="timing-desc">Счастливые, сытые и немного уставшие </div>
                         </div>
                     </div>
                 </div>
-                <a href="https://yandex.com/maps/org/restaurant_18_12/1243410841/?ll=37.524507%2C55.735632&z=16"
-                    class="btn" target="_blank" rel="noopener noreferrer">Как добраться</a>
+                <!-- <a href="https://yandex.com/maps/org/restaurant_18_12/1243410841/?ll=37.524507%2C55.735632&z=16"
+                    class="btn" target="_blank" rel="noopener noreferrer">Как добраться</a> -->
             </div>
+
             <!-- Раздел "До нашей свадьбы осталось" -->
             <div class="countdown-section">
                 <div class="countdown-title">ДО НАШЕЙ СВАДЬБЫ ОСТАЛОСЬ</div>
