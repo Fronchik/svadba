@@ -541,6 +541,7 @@
             font-size: 1.8em;
             margin: 0;
             color: #7e3131;
+            text-align: left;
         }
 
         .timing-desc {
@@ -548,6 +549,7 @@
             font-size: 0.9em;
             color: #850909;
             margin-top: 5px;
+            text-align: left;
         }
 
         @keyframes fadeIn {
@@ -581,11 +583,6 @@
 
             .header-title {
                 font-size: 1.2em;
-            }
-
-            .timing-item {
-                flex-direction: column;
-                align-items: flex-start;
             }
 
             .timing-time {
@@ -663,6 +660,32 @@
                 font-size: 1.9em;
                 margin-top: 0;
                 margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 465px) {
+            .details {
+                padding: 20px;
+            }
+
+            .timing {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            .timing-item {
+                flex-direction: column;
+            }
+
+            .timing-title-text {
+                margin-top: 8px;
+                text-align: center;
+            }
+
+            .timing-desc {
+                text-align: center;
             }
         }
     </style>
