@@ -82,76 +82,10 @@
             letter-spacing: 2px;
         }
 
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2em;
-            margin: 20px 0;
-        }
-
         .invitation {
             padding: 60px 20px;
             text-align: center;
             background-color: var(--light-color);
-        }
-
-        .details {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-            animation: slideUp 1.5s ease-out;
-        }
-
-        .timing {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin: 40px auto;
-            max-width: 500px;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .timing-item {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-            width: 100%;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .timing-time {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 1.2em;
-            min-width: 80px;
-            text-align: left;
-        }
-
-        .timing-icon {
-            margin: 0 20px;
-            font-size: 1.5em;
-            color: var(--accent-color);
-        }
-
-        .timing-title-text {
-            font-family: 'Great Vibes', cursive;
-            font-size: 1.8em;
-            margin: 0;
-            color: var(--dark-color);
-        }
-
-        .timing-desc {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 5px;
         }
 
         .btn {
@@ -196,7 +130,7 @@
             overflow: hidden;
         }
 
-        .countdown-section::before {
+        /* .countdown-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -205,9 +139,9 @@
             height: 20px;
             background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,20 Q25,0 50,10 T100,5 L100,20 Z" fill="%23f9f4f0"/></svg>');
             background-repeat: repeat-x;
-        }
+        } */
 
-        .countdown-section::after {
+        /* .countdown-section::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -216,7 +150,7 @@
             height: 20px;
             background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,0 Q25,20 50,10 T100,15 L100,0 Z" fill="%23f9f4f0"/></svg>');
             background-repeat: repeat-x;
-        }
+        } */
 
         .countdown-title {
             font-family: 'Montserrat', sans-serif;
@@ -224,11 +158,13 @@
             font-weight: 700;
             letter-spacing: 2px;
             margin-bottom: 40px;
-            color: var(--dark-color);
+            color: #7e3131;
+            ;
         }
 
         .highlight {
-            background-color: var(--main-color);
+            /* background-color: var(--main-color); */
+            background-color: #F7CAC9;
             height: 10px;
             margin: 10px auto;
             width: 80%;
@@ -306,6 +242,13 @@
         .family-content {
             position: relative;
             z-index: 2;
+        }
+
+        .family-title {
+            font-family: 'Alex Brush', cursive;
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #7e3131;
         }
 
         .family-text {
@@ -438,7 +381,7 @@
             display: block;
         }
 
-        .farewell-love::before {
+        /* .farewell-love::before {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -448,7 +391,7 @@
             background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,20 Q25,0 50,10 T100,5 L100,20 Z" fill="%23f9f4f0"/></svg>');
             background-repeat: repeat-x;
             opacity: 0.7;
-        }
+        } */
 
         .farewell-names {
             font-family: 'Alex Brush', cursive;
@@ -459,18 +402,20 @@
 
         /* Раздел "Локация" */
         .location-section {
+            max-width: 880px;
+            margin: 0 auto;
             background-color: var(--light-color);
-            padding: 30px 20px;
+            padding: 30px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
+            animation: slideUp 1.5s ease-out;
         }
 
         .location-title {
-            font-family: 'Bad Script', cursive;
-            font-size: 3.5em;
-            color: var(--dark-color);
-            margin-bottom: 20px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 3em;
+            color: #d4a373;
         }
 
         .location-subtitle {
@@ -479,11 +424,11 @@
             font-weight: 600;
             letter-spacing: 1px;
             margin-bottom: 40px;
-            color: var(--dark-color);
+            color: #7e3131;
         }
 
         .location-card {
-            max-width: 800px;
+            max-width: 880px;
             margin: 0 auto;
             background-color: white;
             border-radius: 10px;
@@ -504,18 +449,20 @@
 
         .location-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
+            font-size: 2em;
             font-weight: 600;
             margin-bottom: 10px;
-            color: var(--dark-color);
+            color: #7e3131;
+            font-weight: 400;
         }
 
         .location-address {
             font-family: 'Montserrat', sans-serif;
             font-size: 1em;
             line-height: 1.6;
-            color: var(--dark-color);
+            color: #7e3131;
             margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         .location-map {
@@ -532,6 +479,75 @@
 
         .location-map:hover {
             background-color: var(--accent-color);
+        }
+
+        /* Раздел "Детали" */
+        .details {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        .details-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3em;
+            color: #d4a373;
+            margin: 20px 0;
+        }
+
+        .timing {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 40px auto;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .timing-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            width: 100%;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .timing-time {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.2em;
+            min-width: 80px;
+            text-align: left;
+            color: #7e3131;
+        }
+
+        .timing-icon {
+            margin: 0 20px;
+            font-size: 1.5em;
+            color: #d4a373;
+        }
+
+        .timing-title-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.8em;
+            margin: 0;
+            color: #7e3131;
+        }
+
+        .timing-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            color: #850909;
+            margin-top: 5px;
         }
 
         @keyframes fadeIn {
@@ -567,10 +583,6 @@
                 font-size: 1.2em;
             }
 
-            h2 {
-                font-size: 1.6em;
-            }
-
             .timing-item {
                 flex-direction: column;
                 align-items: flex-start;
@@ -591,6 +603,10 @@
 
             .countdown-label {
                 font-size: 1em;
+            }
+
+            .family-title {
+                font-size: 2em;
             }
 
             .family-script {
@@ -628,6 +644,26 @@
             .location-subtitle {
                 font-size: 1.4em;
             }
+
+            .location-info {
+                max-width: 184px;
+                margin: 0 auto;
+                padding-bottom: 0;
+            }
+
+            .location-name {
+                font-size: 1.5em;
+            }
+
+            .location-address {
+                margin-bottom: 0;
+            }
+
+            .details-title {
+                font-size: 1.9em;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
         }
     </style>
 </head>
@@ -638,7 +674,7 @@
             <div class="header-content">
                 <div class="header-title">THE WEDDING DAY</div>
                 <div class="header-names">Анна & Александр</div>
-                <div class="header-date">01.11.2025 | 16:00</div>
+                <div class="header-date">03.11.2025 | 16:00</div>
             </div>
         </header>
         <section class="invitation">
@@ -682,39 +718,24 @@
                 </div>
             </div>
             <!-- Раздел "Локация" -->
-            <div class="location-section">
-                <div class="location-card">
-                    <div class="location-info">
-                        <!-- <a href="https://yandex.com/maps/org/restaurant_18_12/1243410841/?ll=37.524507%2C55.735632&z=16"
+            <!-- <a href="https://yandex.com/maps/org/restaurant_18_12/1243410841/?ll=37.524507%2C55.735632&z=16"
                             class="location-map" target="_blank" rel="noopener noreferrer">Как добраться</a> -->
-                        <div class="location-section">
-                            <div class="location-title"
-                                style="font-family: 'Great Vibes', cursive; font-size: 3em; color: #d4a373;">Локация
-                            </div>
-                            <div class="location-subtitle"
-                                style="font-family: 'Playfair Display', serif; font-size: 1.8em; color: #7e3131; font-weight: 400;">
-                                Место проведения</div>
-                            <div class="location-card">
-                                <img src="images/restoran.jpg" alt="Ресторан" class="location-image">
-                                <div class="location-info">
-                                    <div class="location-name"
-                                        style="font-family: 'Playfair Display', serif; font-size: 2em; color: #7e3131; font-weight: 600;">
-                                        «Ресторан 18.12»</div>
-                                    <div class="location-address"
-                                        style="font-family: 'Montserrat', sans-serif; font-size: 1em; color: #555; line-height: 1.6;">
-                                        Адрес: Москва, ул. 1812 года, д. 2, корп. 2
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="https://yandex.com/maps/org/restaurant_18_12/1243410841/?ll=37.524507%2C55.735632&z=16"
-                            class="btn" target="_blank" rel="noopener noreferrer">Как добраться</a>
+            <div class="location-section">
+                <div class="location-title">Локация</div>
+                <div class="location-subtitle">Место проведения</div>
+                <div class="location-card">
+                    <img src="images/restoran.jpg" alt="Ресторан" class="location-image">
+                    <div class="location-info">
+                        <div class="location-name">«Ресторан 18.12»</div>
+                        <div class="location-address">Адрес: Москва, ул. 1812 года, д. 2, корп. 2</div>
                     </div>
+                    <a href="https://yandex.com/maps/org/restaurant_18_12/1243410841/?ll=37.524507%2C55.735632&z=16"
+                        class="btn" target="_blank" rel="noopener noreferrer">Как добраться</a>
                 </div>
             </div>
             <!-- Раздел "Детали вечера" -->
             <div class="details">
-                <h2>Программа вечера</h2>
+                <h2 class="details-title">Программа вечера</h2>
                 <div class="timing">
                     <div class="timing-item">
                         <div class="timing-time">16:00</div>
@@ -790,7 +811,7 @@
         // Обратный отсчёт
         function updateCountdown() {
             const now = new Date();
-            const eventDate = new Date('2025-11-01T16:00:00');
+            const eventDate = new Date('2025-11-03T16:00:00');
             const diff = eventDate - now;
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
