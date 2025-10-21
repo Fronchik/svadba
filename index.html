@@ -153,18 +153,16 @@
         } */
 
         .countdown-title {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 1.8em;
             font-weight: 700;
             letter-spacing: 2px;
             margin-bottom: 40px;
-            color: #7e3131;
-            ;
+            color: #aa6b2d;
         }
 
         .highlight {
-            /* background-color: var(--main-color); */
-            background-color: #F7CAC9;
+            background-color: #e5c19e9e;
             height: 10px;
             margin: 10px auto;
             width: 80%;
@@ -177,7 +175,7 @@
             flex-wrap: wrap;
             gap: 20px;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 30px auto 0;
         }
 
         .countdown-item {
@@ -190,29 +188,18 @@
             min-width: 120px;
         }
 
-        .countdown-item::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 0;
-            right: 0;
-            height: 20px;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,20 Q25,0 50,10 T100,5 L100,20 Z" fill="%23e8e0d5"/></svg>');
-            background-repeat: repeat-x;
-        }
-
         .countdown-number {
             font-family: 'Playfair Display', serif;
             font-size: 3.5em;
             font-weight: 700;
-            color: var(--dark-color);
+            color: #9aab06;
             margin-bottom: 5px;
         }
 
         .countdown-label {
             font-family: 'Dancing Script', cursive;
             font-size: 1.3em;
-            color: var(--dark-color);
+            color: #9aab06;
             font-weight: 400;
         }
 
@@ -465,22 +452,6 @@
             line-height: 1.6;
         }
 
-        .location-map {
-            display: inline-block;
-            background-color: var(--dark-color);
-            color: white;
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .location-map:hover {
-            background-color: var(--accent-color);
-        }
-
         /* Раздел "Детали" */
         .details {
             max-width: 800px;
@@ -592,10 +563,12 @@
 
             .countdown-item {
                 min-width: 100px;
+                padding: 10px;
             }
 
             .countdown-number {
                 font-size: 2.5em;
+                font-weight: 500;
             }
 
             .countdown-label {
@@ -687,6 +660,36 @@
             .timing-desc {
                 text-align: center;
             }
+
+            .countdown-section {
+                padding: 20px 10px;
+            }
+
+            .countdown-title {
+                font-size: 1.5em;
+                font-weight: 500;
+                letter-spacing: 0.3px;
+                margin-bottom: 15px;
+            }
+
+            .countdown-item {
+                /* text-align: center;
+                position: relative;
+                background-color: var(--paper-bg);
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+                min-width: 50px;
+            }
+
+            .countdown-number {
+                font-size: 1.2em;
+            }
+
+            .countdown-label {
+                font-size: 0.8em;
+                font-weight: 200;
+            }
         }
     </style>
 </head>
@@ -741,8 +744,6 @@
                 </div>
             </div>
             <!-- Раздел "Локация" -->
-            <!-- <a href="https://yandex.com/maps/org/restaurant_18_12/1243410841/?ll=37.524507%2C55.735632&z=16"
-                            class="location-map" target="_blank" rel="noopener noreferrer">Как добраться</a> -->
             <div class="location-section">
                 <div class="location-title">Локация</div>
                 <div class="location-subtitle">Место проведения</div>
@@ -793,10 +794,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <a href="https://yandex.com/maps/org/restaurant_18_12/1243410841/?ll=37.524507%2C55.735632&z=16"
-                    class="btn" target="_blank" rel="noopener noreferrer">Как добраться</a> -->
             </div>
-
             <!-- Раздел "До нашей свадьбы осталось" -->
             <div class="countdown-section">
                 <div class="countdown-title">ДО НАШЕЙ СВАДЬБЫ ОСТАЛОСЬ</div>
